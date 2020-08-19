@@ -1,13 +1,4 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "./node_modules/prettier-stylelint/config.js"
-  ],
-  "ignoreFiles": [
-    "./_src/styles/base/_reset.scss",
-    "./_src/styles/tools/_get-iconfont.scss",
-    "./_src/styles/vendor/**"
-  ],
   "rules": {
     "at-rule-no-unknown": null,
     "at-rule-no-vendor-prefix": true,
@@ -53,7 +44,6 @@
     "property-blacklist": null,
     "property-whitelist": null,
     "property-no-unknown": true,
-    "property-no-vendor-prefix": true,
     "property-case": "lower",
     "declaration-property-unit-blacklist": null,
     "declaration-property-unit-whitelist": null,

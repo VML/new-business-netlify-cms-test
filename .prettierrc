@@ -1,12 +1,5 @@
 {
-  "singleQuote": true,
-  "printWidth": 120,
-  "overrides": [
-    {
-      "files": "*.scss",
-      "options": {
-        "singleQuote": true
-      }
-    }
-  ]
+  "semi": false,
+  "arrowParens": "always",
+  "singleQuote": true
 }
