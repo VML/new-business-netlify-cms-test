@@ -2,6 +2,9 @@
   "layout": "blog",
   "date": "2020-08-19T21:12:47.391Z",
   "title": "Test page 1",
-  "thumbnail": "/assets/images/uploads/competitive-advantage-survey-responses-heather-physioc-mozcon-2020.jpg",
-  "body": "This is body text"
+  "thumbnail": "/img/basic-swot-analysis-template-heather-physioc-mozcon-2020.001.jpg",
+  "body": "This is body text",
+  "update": "2020-08-20T20:40:04.547Z",
+  "summary": "This is summary text of this test page. This is the first page to try netlifycms.  It has to be 164 characters for some reason. So I just keep typing even more to try.",
+  "author": "Terrence"
 }
