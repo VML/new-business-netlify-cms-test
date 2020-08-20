@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
 
 export default {
   head() {
@@ -33,12 +33,12 @@ export default {
       script: [
         { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
       ]
-    }
+    };
   },
   components: {
     Logo
   }
-}
+};
 </script>
 
 <style>
