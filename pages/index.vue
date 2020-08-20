@@ -21,6 +21,9 @@
         </a>
       </div>
     </div>
+    <li v-for="post of posts" :key="post.slug">
+      <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
+    </li>
   </div>
 </template>
 
@@ -28,15 +31,23 @@
 import Logo from '~/components/Logo.vue';
 
 export default {
+  components: {
+    Logo
+  },
+
+  async asyncData({ $content }) {
+    const posts = await $content('blog').fetch();
+
+    return {
+      posts
+    };
+  },
   head() {
     return {
       script: [
         { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
       ]
     };
-  },
-  components: {
-    Logo
   }
 };
 </script>
