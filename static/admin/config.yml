@@ -1,19 +1,29 @@
 backend:
   name: git-gateway
   branch: master
-media_folder: "static/images/"
-public_folder: "/images/"
+publish_mode: editorial_workflow
+media_folder: "static/img"
+public_folder: "/img"
 collections:
-  - name: "page" # Used in routes, e.g., /admin/collections/blog
-    label: "Page" # Used in the UI
-    format: json
-    folder: "content" # The path to the folder where the documents are stored
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    format: 'json'
+    folder: "content/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    sort: 'date:desc'
+    editor:
+        preview: false
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Type", name: "type", widget: "string", required: false}
+      - {label: "Language", name: "language", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: Summary 164-220, name: summary, widget: text, required: true, pattern: ['.{164,220}', "Must be within 164 and 220 characters"]}
+      - {label: "Publish Date", name: "date", widget: "date", required: true}
+      - {label: "Updated Date", name: "update", widget: "date", required: false}
+      - {label: "Author", name: "author", widget: "string", required: true}
+      - {label: "Author Link", name: "authorlink", widget: "string", required: false}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: true}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
+
 site_url: https://netlifycmstest.vmlyrconnect.com
